@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Piano Virtual - Simulador de Piano Online Gratuito</title>
+    <meta name="description" content="Toque piano virtual gratuitamente no seu navegador. Simulador de piano interativo com 17 teclas, controle de volume e interface moderna. Aprenda e divirta-se!">
+    <meta name="keywords" content="piano virtual, simulador de piano, piano online, tocar piano, música online, piano grátis, aprender piano">
+    <meta name="author" content="Bill Carioca">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://billcarioca.github.io/simulador-de-piano/">
+    <meta property="og:title" content="Piano Virtual - Simulador de Piano Online">
+    <meta property="og:description" content="Toque piano virtual gratuitamente no seu navegador. Interface moderna e intuitiva.">
+    <meta property="og:image" content="./Captura da Web_12-10-2023_23493_127.0.0.1.jpeg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://billcarioca.github.io/simulador-de-piano/">
+    <meta property="twitter:title" content="Piano Virtual - Simulador de Piano Online">
+    <meta property="twitter:description" content="Toque piano virtual gratuitamente no seu navegador.">
+    <meta property="twitter:image" content="./Captura da Web_12-10-2023_23493_127.0.0.1.jpeg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./src/images/favicon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">🎹 Piano Virtual</h1>
+            <div class="controls">
+                <div class="column volume-slider">
+                    <label for="volume-control">
+                        <span>Volume</span>
+                    </label>
+                    <input 
+                        type="range" 
+                        id="volume-control"
+                        min="0" 
+                        max="1" 
+                        value="0.5" 
+                        step="0.01"
+                        aria-label="Controle de volume do piano"
+                        aria-valuemin="0"
+                        aria-valuemax="1"
+                        aria-valuenow="0.5"
+                    >
+                </div>
+                <div class="column keys-check">
+                    <label for="keys-toggle">
+                        <span>Mostrar Teclas</span>
+                    </label>
+                    <input 
+                        type="checkbox" 
+                        id="keys-toggle"
+                        checked
+                        aria-label="Mostrar ou ocultar letras nas teclas"
+                        role="switch"
+                        aria-checked="true"
+                    >
+                </div>
+            </div>
+        </header>
+        <ul class="piano-keys" role="toolbar" aria-label="Teclas do piano">
+            <li class="key white" data-key="a" role="button" tabindex="0" aria-label="Tecla Dó - pressione A"><span>a</span></li>
+            <li class="key black" data-key="w" role="button" tabindex="0" aria-label="Tecla Dó sustenido - pressione W"><span>w</span></li>
+            <li class="key white" data-key="s" role="button" tabindex="0" aria-label="Tecla Ré - pressione S"><span>s</span></li>
+            <li class="key black" data-key="e" role="button" tabindex="0" aria-label="Tecla Ré sustenido - pressione E"><span>e</span></li>
+            <li class="key white" data-key="d" role="button" tabindex="0" aria-label="Tecla Mi - pressione D"><span>d</span></li>
+            <li class="key white" data-key="f" role="button" tabindex="0" aria-label="Tecla Fá - pressione F"><span>f</span></li>
+            <li class="key black" data-key="t" role="button" tabindex="0" aria-label="Tecla Fá sustenido - pressione T"><span>t</span></li>
+            <li class="key white" data-key="g" role="button" tabindex="0" aria-label="Tecla Sol - pressione G"><span>g</span></li>
+            <li class="key black" data-key="y" role="button" tabindex="0" aria-label="Tecla Sol sustenido - pressione Y"><span>y</span></li>
+            <li class="key white" data-key="h" role="button" tabindex="0" aria-label="Tecla Lá - pressione H"><span>h</span></li>
+            <li class="key black" data-key="u" role="button" tabindex="0" aria-label="Tecla Lá sustenido - pressione U"><span>u</span></li>
+            <li class="key white" data-key="j" role="button" tabindex="0" aria-label="Tecla Si - pressione J"><span>j</span></li>
+            <li class="key white" data-key="k" role="button" tabindex="0" aria-label="Tecla Dó - pressione K"><span>k</span></li>
+            <li class="key black" data-key="o" role="button" tabindex="0" aria-label="Tecla Dó sustenido - pressione O"><span>o</span></li>
+            <li class="key white" data-key="l" role="button" tabindex="0" aria-label="Tecla Ré - pressione L"><span>l</span></li>
+            <li class="key black" data-key="p" role="button" tabindex="0" aria-label="Tecla Ré sustenido - pressione P"><span>p</span></li>
+            <li class="key white" data-key=";" role="button" tabindex="0" aria-label="Tecla Mi - pressione ponto e vírgula"><span>;</span></li>
+        </ul>
+    </div>
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+</html>
